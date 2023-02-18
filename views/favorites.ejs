@@ -11,11 +11,11 @@
         <ul class="row list-unstyled">
         <% for(var i=0; i<recipes.length; i++) {%>
           <li class="col-6 justify-content-between mt-5">
-            <a href="/recipe/<%= recipes[i]._id%>">
+            <a href="/recipe/<%= recipes[i].recipe._id%>">
               <h2><%= recipes[i].name%></h2>
-              <img class="img-fluid" src="<%= recipes[i].image%>">
-              <p><%= recipes[i].ingredients%></p>
-              <p><%= recipes[i].directions%></p>
+              <img class="img-fluid" src="<%= recipes[i].recipe.image%>">
+              <p><%= recipes[i].recipe.ingredients%></p>
+              <p><%= recipes[i].recipe.directions%></p>
             </a>
           </li>
         <% } %>

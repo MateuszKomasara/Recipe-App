@@ -23,12 +23,12 @@ module.exports = {
       //Since we have a session each request (req) contains the logged-in users info: req.user
       //console.log(req.user) to see everything
       //Grabbing just the posts of the logged-in user
-      const favorites = await Favorite.find({ user: req.user.id });
+      const recipes = await Favorite.find({ user: req.user.id });
       populate('recipe');
 
-      console.log(favorites)
+      console.log(recipes)
       //Sending post data from mongodb and user data to ejs template
-      res.render("favorites.ejs", { recipes: recipes, user: req.user });
+      res.render("favorites.ejs", { recipes: recipes.recipe, user: req.user });
     } catch (err) {
       console.log(err);
     }
