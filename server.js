@@ -60,7 +60,7 @@ app.use("/recipe", recipeRoutes);
 
 //Server Running
 app.listen(process.env.PORT, () => {
-  console.log("Server is running, you better catch it!");
+  console.log("Server listening on " + process.env.PORT);
 });
 
 // Testing, Testing!!!
